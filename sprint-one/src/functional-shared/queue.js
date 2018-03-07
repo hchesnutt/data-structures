@@ -1,8 +1,27 @@
 var Queue = function() {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
+  let someInstance = {};
+  someInstance.min = 0;
+  someInstance.max = 0;
+  _.extend(someInstance, queueMethods);
+  return someInstance;
 };
 
-var queueMethods = {};
+var queueMethods = {
+  enqueue: function(value) {
+    // add to max
+    this.max++;
+    // assign 
+    this[this.max] = value;
+  },
+  dequeue: function() {
+    this.min++;
+    let result = this[this.min];
+    delete this[this.min];
+    return result;
+  },
+  size: function() {
+    return this.max - this.min < 0 ? 0 : this.max - this.min;
+  }
+};
 
 
