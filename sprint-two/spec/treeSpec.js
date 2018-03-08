@@ -17,6 +17,7 @@ describe('tree', function() {
   });
 
   it('should return true for a value that the tree contains', function() {
+    debugger;
     tree.addChild(5);
     expect(tree.contains(5)).to.equal(true);
   });

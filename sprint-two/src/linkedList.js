@@ -30,7 +30,7 @@ var LinkedList = function() {
     var current = list.head;
     while (current) {
       if (current.value === target) {
-        return true
+        return true;
       }
       current = current.next;
     }
