@@ -1,0 +1,9 @@
+Priority list
+
+X - Binary Tree
+- Heaps
+- Dynamic resizing of Hash Table
+- Bloom Filter
+
+
+!Ask Danny about classes within classes using ES6
