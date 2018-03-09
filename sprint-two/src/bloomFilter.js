@@ -1,4 +1,4 @@
-class BinarySearchTree {
+class BloomFilter {
   constructor(value) {
     this._head = this.BSTNode(value);
   }
