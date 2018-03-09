@@ -1,0 +1,7 @@
+Priority list
+
+X - Doubly-Linked-List
+X - Binary Tree
+X - Dynamic resizing of Hash Table
+- Heaps
+- Bloom Filter
