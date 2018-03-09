@@ -3,5 +3,11 @@ Priority list
 X - Doubly-Linked-List
 X - Binary Tree
 X - Dynamic resizing of Hash Table
-- Heaps
 - Bloom Filter
+- AVL Tree
+- B-Tree
+- Heaps
+- Graph algorithm
+  - Depth first search (stack)
+  - Breadth first search (queue)
+  - Uniform cost search (heap)
