@@ -7,7 +7,7 @@ class AVLTree {
     var newNode = this.AVLNode(value);
     // BST insert with height update
     this.bstInsert(newNode, this._root);
-    console.log(this._root)
+    console.log(this._root);
     // check for imbalanced nodes, calls cb on node
     this.checkForImbalance(newNode);
     // if left or right imbalance

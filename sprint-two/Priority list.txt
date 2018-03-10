@@ -11,3 +11,20 @@ X - Dynamic resizing of Hash Table
   - Depth first search (stack)
   - Breadth first search (queue)
   - Uniform cost search (heap)
+- Binary Search Tree Traversal Methods:
+  - depth first:
+    - inorder, preorder, postorder
+  - breadth first:
+    - use queue to add children
+  steps
+  
+  finish tests
+  
+  insert:
+    outer function logic: Henry
+    rotation logic: Ryan
+  
+  delete:
+    check for rebalance 
+    
+   
