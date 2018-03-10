@@ -24,17 +24,15 @@ class AVLTree {
   }
   
   checkForImbalance(currNode) {
-    var imbalance = (this.getHeight(currNode.left) + 1) - (this.getHeight(currNode.right) + 1);
+    var imbalance = currNode.left.height - currNode.right.height;
     if (imbalance < -1) {
-      this.rebalance(currNode, 'right');
-      checkForImbalance(currNode.parent);
+      rebalance(currNode, 'right');
     }
     if (imbalance > 1) {
-      this.rebalance(currNode, 'left');
-      checkForImbalance(currNode.parent);
+      rebalance(currNode, 'left');
     }
-    if(!currNode.parent) {
-      return;
+    if(currNode.parent) {
+      this.checkForImbalance(currNode.parent);
     }
   }
   
@@ -45,11 +43,11 @@ class AVLTree {
     if (!node.right && !node.left) {
       return 0;
     } else if(!node.right) {
-      return node.left.height;
+      return node.height;
     } else if(!node.left) {
-      return node.right.height;
+      return node.height;
     } else {
-      return Math.max(node.right.height, node.left.height) + 1;
+      return Math.max(node.height, node.height) + 1;
     }
   }
   
@@ -58,19 +56,18 @@ class AVLTree {
       this._root = node;
       return this._root;
     } else {
-      node.height++;
+      currNode.height++;
       if (node.value > currNode.value) {
         if (!currNode.right) {
           currNode.right = node; // if node should go right and there's no right child, insert here
-          node.parent = currNode.right;
+          node.parent = currNode;
         } else {
           this.bstInsert(node, currNode.right);
         }
-      }
-      if (node.value < currNode.value) {
+      } else if (node.value < currNode.value) {
         if (!currNode.left) {
           currNode.left = node;
-          node.parent = currNode.left;
+          node.parent = currNode;
         } else {
           this.bstInsert(node, currNode.left);
         }
